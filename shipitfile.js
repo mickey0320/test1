@@ -7,19 +7,20 @@ module.exports = shipit => {
   // await shipit.remote('pm2 startOrRestart /var/www/pojects/current/ecosystem.json')
   // })
   shipit.on('updated', () => {
-    shipit.start('app:build');
+    shipit.start('install');
   })
 
-  shipit.blTask('app:build', async () => {
-    // await shipit.remote('cd /var/www/pojects/current; npm install');
-    // await shipit.remote('npm install');
-    await shipit.remote('sh test.sh');
+  shipit.blTask('install', async () => {
+    var path = shipit.currentPath;
+    return shipit.remote('echo $PATH && cd ' + path + ' && npm instal');
   })
 
   shipit.initConfig({
     default: {
-      deployTo: '/var/www/pojects',
+      workspace: '/User/jianyan/shipit-workspace/',
+      deployTo: '/var/www/projects',
       repositoryUrl: 'git://github.com/mickey0320/test.git',
+      shallowClone: true
     },
     production: {
       servers: 'root@106.12.202.39:10022'
