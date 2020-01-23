@@ -8,7 +8,7 @@
        "user" : "root",
        "host" : ["106.12.202.39"],
        "ref"  : "origin/master",
-       "repo" : "git@github.com:Username/repository.git",
+       "repo" : "git@github.com:mickey0320/test.git", 
        "path" : "/var/www"
       }
    }
