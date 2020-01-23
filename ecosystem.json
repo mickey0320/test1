@@ -1,7 +1,14 @@
 {
    "apps" : [{
       "name" : "test",
-      "script" : "app.js"
+      "script" : "app.js",
+      "env":{
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production":{
+        "NODE_ENV":"production"
+      }
+      
    }],
    "deploy" : {
      "production" : {
@@ -12,7 +19,10 @@
        "repo" : "git@github.com:mickey0320/test.git",
        "ssh_options":"StrictHostKeyChecking=no",
        "path" : "/var/www",
-       "post-deploy": "npm install"
+       "post-deploy": "npm install",
+       "env":{
+         "NODE_ENV": "production"
+       }
       }
    }
 }
