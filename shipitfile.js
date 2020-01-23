@@ -6,7 +6,7 @@ module.exports = shipit => {
   // shipit.on('')
   // await shipit.remote('pm2 startOrRestart /var/www/pojects/current/ecosystem.json')
   // })
-  shipit.on('fetched', () => {
+  shipit.on('updated', () => {
     shipit.start('app:build');
   })
 
