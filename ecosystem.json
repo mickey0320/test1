@@ -6,6 +6,7 @@
    "deploy" : {
      "production" : {
        "user" : "root",
+       "port" : "10022",
        "host" : ["106.12.202.39"],
        "ref"  : "origin/master",
        "repo" : "git@github.com:mickey0320/test.git",
