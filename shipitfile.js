@@ -6,13 +6,14 @@ module.exports = shipit => {
   // shipit.on('')
   // await shipit.remote('pm2 startOrRestart /var/www/pojects/current/ecosystem.json')
   // })
-  shipit.on('updated', () => {
-    shipit.start('install');
+  shipit.on('published', () => {
+    return shipit.start('install');
   })
 
   shipit.blTask('install', async () => {
     var path = shipit.currentPath;
-    return shipit.remote('echo $PATH && cd ' + path + ' && npm instal');
+
+    return shipit.remote('echo $PATH && cd ' + path + ' && npm install');
   })
 
   shipit.initConfig({
