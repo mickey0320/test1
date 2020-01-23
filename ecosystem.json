@@ -1,14 +1,7 @@
 {
    "apps" : [{
       "name" : "test",
-      "script" : "app.js",
-      "env":{
-        "COMMON_VARIABLE": "true"
-      },
-      "env_production":{
-        "NODE_ENV":"production1"
-      }
-      
+      "script" : "app.js"
    }],
    "deploy" : {
      "production" : {
