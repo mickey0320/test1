@@ -8,7 +8,8 @@
        "user" : "root",
        "host" : ["106.12.202.39"],
        "ref"  : "origin/master",
-       "repo" : "git@github.com:mickey0320/test.git", 
+       "repo" : "git@github.com:mickey0320/test.git",
+       "ssh_options":"StrictHostKeyChecking=no",
        "path" : "/var/www"
       }
    }
