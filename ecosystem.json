@@ -11,7 +11,8 @@
        "ref"  : "origin/master",
        "repo" : "git@github.com:mickey0320/test.git",
        "ssh_options":"StrictHostKeyChecking=no",
-       "path" : "/var/www"
+       "path" : "/var/www",
+       "post-deploy": "npm install"
       }
    }
 }
