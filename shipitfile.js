@@ -1,6 +1,7 @@
 module.exports = shipit => {
   // Load shipit-deploy tasks
-  require('shipit-deploy')(shipit)
+  require('shipit-deploy')(shipit);
+  require('shipit-npm')(shipit);
   require('shipit-pm2')(shipit);
 
   shipit.initConfig({
@@ -14,8 +15,8 @@ module.exports = shipit => {
       },
       npm: {
         remote: true,
-        installArgs: ['gulp'],
-        installFlags: ['--production']
+        // installArgs: ['gulp'],
+        // installFlags: ['--production']
       }
     },
     production: {
