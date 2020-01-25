@@ -1,7 +1,7 @@
 {
    "apps" : [{
       "name" : "test",
-      "script" : "app.js"
+      "script" : "/var/www/project/test/current/app.js"
    }],
    "deploy" : {
      "production" : {
