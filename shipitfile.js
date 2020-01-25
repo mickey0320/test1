@@ -14,8 +14,8 @@ module.exports = shipit => {
       },
       npm: {
         remote: true,
-        // installArgs: ['gulp'],
-        // installFlags: ['-g']
+        // installArgs: ['--production'],
+        installFlags: ['--production']
       }
     },
     production: {
