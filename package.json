@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/mickey0320/test#readme",
   "dependencies": {
-    "koa": "^2.11.0"
-  },
-  "devDependencies": {
+    "koa": "^2.11.0",
     "shipit-cli": "^5.1.0",
-    "shipit-deploy": "^5.1.0"
-  }
+    "shipit-deploy": "^5.1.0",
+    "shipit-npm": "^0.2.0",
+    "shipit-pm": "^0.3.0",
+    "shipit-pm2": "0.0.4"
+  },
+  "devDependencies": {}
 }
